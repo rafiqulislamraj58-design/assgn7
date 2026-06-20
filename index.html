@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow • Vanilla JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div class="container">
+        <header>
+            <h1>TaskFlow</h1>
+            <div class="theme-toggle" id="themeToggle">🌙</div>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="total-tasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="pending-tasks">0</h3>
+                <p>Pending</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="completed-tasks">0</h3>
+                <p>Completed</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="task-form">
+                <h2>Create New Task</h2>
+                
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="taskTitle">Task Title</label>
+                        <input type="text" id="taskTitle" placeholder="What needs to be done?" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskCategory">Category</label>
+                        <select id="taskCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="work">💼 Work</option>
+                            <option value="personal">🏠 Personal</option>
+                            <option value="study">📚 Study</option>
+                            <option value="health">❤️ Health</option>
+                            <option value="other">📌 Other</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </form>
+            </div>
+
+    
+            <div class="task-board">
+                <div class="board-header">
+                    <h2>All Tasks</h2>
+                    <select id="filterStatus">
+                        <option value="all">All Tasks</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                
+                <div id="taskList" class="task-list">
+                 
+                </div>
+            </div>
+        </div>
+
+
+        <div class="render-section">
+            <h2>Browser Rendering Pipeline</h2>
+            <div class="flow-diagram">
+                <div class="flow-box">1. HTML Parsing → DOM Tree</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">2. CSS Parsing → CSSOM Tree</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">3. DOM + CSSOM = Render Tree</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">4. Layout (Reflow)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">5. Paint</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">6. Composite</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Vanilla JS • DOM Manipulation • Event Delegation
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
