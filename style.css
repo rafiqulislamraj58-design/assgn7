@@ -219,6 +219,14 @@ input, select {
 .task-list{
     margin-top: 1rem;
 }
+#grandparent, #parent {
+    border: 2px solid #333;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 8px;
+}
+#grandparent { background: #e2e8f0; }
+#parent { background: #cbd5e1; }
 footer {
     text-align: center;
     margin-top: 3rem;
