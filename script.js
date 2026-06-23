@@ -2,6 +2,26 @@
  const mainForm = document.querySelector('#taskForm');
  const taskTittle = document.querySelector('#taskTitle');
  const taskCatagory = document.querySelector('#taskCategory');
+const fitlterStatus =  document.querySelector('#filterStatus');
+fitlterStatus.addEventListener('change',(e)=>{
+    const filter = e.target.value;
+    const allCards = document.querySelectorAll('.task-card');
+    allCards.forEach((elam)=>{
+    let status =  elam.getAttribute('data-status');
+    if(filter==='all'){
+        elam.style.display = 'block';
+
+    }else if(filter==='pending'&& status==='pending'){
+        elam.style.display='block'
+    }else if(filter==='completed'&&status==='completed'){
+        elam.style.display='block'
+    }else{
+        elam.style.display='none';
+    }
+
+})
+})
+
  let hadingcolor = document.querySelector('#takflow')
 
  toggole.addEventListener('click',()=>{
